@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family:  "Franklin Gothic Heavy" ;
+}
+html {
+  scroll-behavior: smooth;
+} 
+
+button a{
+  color: white;
+  font-style: none;
+  text-decoration: none;
+}
+
+.section1 {
+  background: url("https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.recipe-txt {
+  font-style: italic;
+  color: rgb(154, 67, 5);
+  font-size: 13vw;
+}
+.text {
+  
+  font-family: "Franklin Gothic Heavy";
+  font-size: 8vw;
+  color: white;
+  text-shadow: 8px 5px 5px rgba(1, 1, 1, 20),
+    5px 5px 70px rgba(255, 255, 255, 0.5);
+  
+}
+
+.section1 button{
+  padding: 1vw;
+  width: 15vw;
+  margin-top: 2vh;
+  font-family: "Franklin Gothic Heavy";
+  background-color: rgb(154, 67, 5);
+  border: none;
+  color: white;
+  font-size: 1.5vw;
+  border-radius: 8px;
+
+}
+
+.title-box{
+  top: 30%;
+  left: 10%;
+  position:absolute;
+
+}
+
+.section2{
+  height: 100vh;
+}

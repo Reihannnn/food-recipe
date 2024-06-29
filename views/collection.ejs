@@ -1,0 +1,141 @@
+<h1 class="collection-judul">Collections.</h1>
+<section class="collection-section">
+  <div class="collection-box">
+    <img
+      src="https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_640.jpg"
+      alt=""
+    />
+    <div class="collection-title">
+      <h1>Chiken Breast</h1>
+      <div class="collection-made-by">
+        <div class="dropdown">
+          <button class="dropbtn" data-dropdown="dropdown1">Recipe</button>
+          <div id="myDropdown" class="dropdown-content" id="dropdown1">
+            <a href="#action1">Recipe 1</a>
+            <a href="#action1">Recipe 2</a>
+            <a href="#action1">Recipe 3</a>
+          </div>
+        </div>
+        <p>By : reihan achmad</p>
+      </div>
+      <p class="collection-message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deserunt
+        voluptas mollitia totam cum obcaecati! Harum animi nostrum voluptates
+        provident amet autem, asperiores veritatis non suscipit a impedit quas
+        deleniti.
+      </p>
+    </div>
+  </div>
+
+  <div class="collection-box">
+    <img
+      src="https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_640.jpg"
+      alt=""
+    />
+    <div class="collection-title">
+      <h1>Chiken Breast</h1>
+      <div class="collection-made-by">
+        <div class="dropdown">
+          <button class="dropbtn" data-dropdown="dropdown2">Recipe</button>
+          <div id="myDropdown" class="dropdown-content" id="dropdown2">
+            <a href="#action1">Recipe 1</a>
+            <a href="#action1">Recipe 2</a>
+            <a href="#action1">Recipe 3</a>
+          </div>
+        </div>
+        <p>By : reihan achmad</p>
+      </div>
+      <p class="collection-message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deserunt
+        voluptas mollitia totam cum obcaecati! Harum animi nostrum voluptates
+        provident amet autem, asperiores veritatis non suscipit a impedit quas
+        deleniti.
+      </p>
+    </div>
+  </div>
+
+  <div class="collection-box">
+    <img
+      src="https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_640.jpg"
+      alt=""
+    />
+    <div class="collection-title">
+      <h1>Chiken Breast</h1>
+      <div class="collection-made-by">
+        <div class="dropdown">
+          <button class="dropbtn" data-dropdown="dropdown3">Recipe</button>
+          <div id="myDropdown" class="dropdown-content" id="dropdown3">
+            <a href="#action1">Recipe 1</a>
+            <a href="#action1">Recipe 2</a>
+            <a href="#action1">Recipe 3</a>
+          </div>
+        </div>
+        <p>By : reihan achmad</p>
+      </div>
+      <p class="collection-message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deserunt
+        voluptas mollitia totam cum obcaecati! Harum animi nostrum voluptates
+        provident amet autem, asperiores veritatis non suscipit a impedit quas
+        deleniti.
+      </p>
+    </div>
+  </div>
+
+  <div class="collection-box">
+    <img
+      src="https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_640.jpg"
+      alt=""
+    />
+    <div class="collection-title">
+      <h1>Chiken Breast</h1>
+      <div class="collection-made-by">
+        <div class="dropdown">
+          <button class="dropbtn" data-dropdown="dropdown4">Recipe</button>
+          <div id="myDropdown" class="dropdown-content" id="dropdown4">
+            <a href="#action1">Recipe 1</a>
+            <a href="#action1">Recipe 2</a>
+            <a href="#action1">Recipe 3</a>
+          </div>
+        </div>
+        <p>By : reihan achmad</p>
+      </div>
+      <p class="collection-message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deserunt
+        voluptas mollitia totam cum obcaecati! Harum animi nostrum voluptates
+        provident amet autem, asperiores veritatis non suscipit a impedit quas
+        deleniti.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttonAll = document.querySelectorAll(".dropbtn");
+  console.log(buttonAll);
+
+  buttonAll.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const dropdownId = event.target.getAttribute("data-dropdown");
+      const myDrop = document.querySelectorAll("#myDropdown")
+
+      const splite = dropdownId.split("").slice(-1)
+      const toInt = parseInt(splite)
+
+      myDrop[toInt-1].classList.toggle("show")
+  
+    });
+  });
+
+  // Tutup dropdown jika pengguna mengklik di luar dropdown
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
+</script>

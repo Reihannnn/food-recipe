@@ -1,0 +1,21 @@
+<%- include("header.ejs")%>
+
+<section class="form-section">
+  <h1>Form Section</h1>
+  <div></div>
+  <form action="/post" method="POST" class="post-form">
+    <label for="food-name">Food Name :</label>
+    <input type="text" name="food-name" />
+
+    <label for="chef-name">Chef :</label>
+    <input type="text" name="chef-name" />
+
+    <label for="chef-name">Food Image :</label>
+    <input type="text" name="food-image" />
+
+    <label for="Message">Message :</label>
+    <textarea name="message" id="message" rows="4" cols="50"></textarea>
+
+    <button type="submit" class="submit-btn ">Submit</button>
+  </form>
+</section>

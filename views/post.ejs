@@ -1,0 +1,81 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil-post</title>
+    <%-include ("header.ejs")%>
+  </head>
+
+  <body>
+    <h1 class="judul-hasil">All Posts</h1>
+    <section class="hasil-section">
+      <% hasil.forEach(function(post) { %>
+
+      <div class="box-hasil">
+        <img src="<%= post.foodImage%>" alt="" class="hasil-image" />
+
+        <div class="title-hasil">
+          <h1><%= post.foodName %></h1>
+          <p>by : <%= post.chefName %></p>
+
+          <p>"Recipe Message" : <%= post.message %></p>
+        </div>
+
+        <div class="silang" data-id="<%= post.id %>" onclick="this.parentElement.style.display = 'none';">X</div>
+      </div>
+      <% }); %>
+    </section>
+    <div class="btn-mid">
+      <a href="/new-post">
+        <button class="jump-link">Create another Recipe</button>
+      </a>
+
+    </div>
+  </body>
+  
+  
+  <script>
+    // const post = [1,2,3]
+    const box = document.querySelectorAll(".box-hasil");
+    // const silang = document.querySelectorAll(".silang");
+    
+    // const result = silang.forEach((element) => {
+    //   element.addEventListener("click", function (e) {
+    //     const boxHasil = e.target.closest(".box-hasil");
+    //     const id = boxHasil ? boxHasil.id : null;
+    //     if (id) {
+    //       box[id - 1].style.visibility = "hidden";
+    //       console.log(`ini id ke -${id}`);
+    //       console.log(box);
+    //     }
+    //   });
+    // });
+
+    document.querySelectorAll(".silang").forEach(element => {
+      element.addEventListener("click", function (e) {
+        const postId = this.getAttribute("data-id");
+        if (postId) {
+          fetch(`/post?deleteId=${postId}`, { method: "GET" })
+            .then(response => {
+              if (response.ok) {
+                const postElement = document.getElementById(`post-${postId}`);
+                if (postElement) {
+                  postElement.remove();
+                  console.log(`Post with ID ${postId} deleted successfully.`);
+                } else {
+                  console.error(`Post element with ID ${postId} not found in DOM.`);
+                }
+              } else {
+                console.error(`Failed to delete post with ID ${postId}.`);
+              }
+            })
+            .catch(error => console.error("Error:", error));
+            
+            
+        }
+      });
+    });
+    
+  </script>
+</html>

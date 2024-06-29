@@ -1,0 +1,96 @@
+.collection-judul{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.collection-section{
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+}
+
+.collection-section img{
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  border:0.5px solid black;
+}
+
+.collection-box{
+  width: 550px;
+  gap: 10px;
+  display: flex;
+  padding-right: 12px;
+  box-shadow: 12px 10px 10px 0.1px gray;
+  border: 0.5px solid black;
+}
+.collection-made-by{
+  display: flex;
+  padding:10px;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  color: grey;
+  
+}
+
+/* .collection-made-by button{
+  padding: 5px;
+  width: 100px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+} */
+
+.collection-section h1{
+  padding:7px;
+  margin-top: 12px;
+}
+.collection-message{
+  color: gray;
+}
+
+.dropbtn {
+  padding: 12px;
+  width: 100px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Gaya untuk container -con */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Gaya untuk konten dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e0e0e0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Gaya untuk link di dalam konten dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Ubah warna link saat dihover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Tampilkan dropdown saat button diklik */
+.show {display: block;}
