@@ -1,0 +1,44 @@
+# Direktori node_modules berisi semua dependensi Node.js, biasanya sangat besar
+node_modules/
+
+# Direktori log, seringkali tidak relevan untuk di-commit
+logs/
+*.log
+npm-debug.log*
+
+# File lingkungan lokal
+.env
+
+# Direktori data sementara
+tmp/
+temp/
+
+# File debug repl
+node_repl_history
+
+# Direktori output npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Direktori coverage (hasil dari pengujian)
+coverage/
+
+# Direktori cache npm
+.npm/
+
+# File konfigurasi editor
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Direktori cache linting
+.eslintcache
+
+# Direktori dist atau build (hasil dari build)
+dist/
+build/
+
+# Direktori data lain yang tidak ingin di-commit
+.DS_Store
+Thumbs.db
